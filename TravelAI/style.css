@@ -10,6 +10,10 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 h1 {
     font-size: 2.6rem;
 }
@@ -24,6 +28,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
+    font-weight: normal;
 }
 
 h4 {
@@ -45,6 +50,7 @@ button {
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 /* Nav Section w/ Hero */
@@ -61,6 +67,7 @@ nav {
     padding: 2rem;
     min-height: 10vh;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav ul {
@@ -73,6 +80,7 @@ nav ul {
 
 #logo {
     flex: 2 1 40rem;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .hero {
@@ -91,4 +99,52 @@ nav ul {
 
 .hero h3 {
     padding: 5rem;
+}
+
+/* Benefits Section */
+
+#locations {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),url("./images/new-york-page.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.locations-head {
+    width: 90vw;
+    margin: auto;
+}
+
+.locations-head h2 {
+    padding: 1rem 0;
+}
+
+.locations-head h3 {
+    padding: 4rem 0;
+}
+
+.cloud {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 930px) {
+
+    html {
+        font-size: 45%;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    #logo {
+        padding: 2rem;
+    }
 }
