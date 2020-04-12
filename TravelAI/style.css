@@ -35,6 +35,18 @@ a {
     text-decoration: none;
 }
 
+/* Button */
+
+button {
+    padding: 2rem 6rem;
+    background-color: #4c6e97;
+    background-origin: border-box;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
 /* Nav Section w/ Hero */
 
 .main-head {
@@ -65,7 +77,18 @@ nav ul {
 
 .hero {
     min-height: 90vh;
-    background-image: url('./images/landing-page.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url('./images/landing-page.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 5rem;
 }
