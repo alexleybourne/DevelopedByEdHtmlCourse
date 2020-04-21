@@ -124,7 +124,7 @@ nav ul {
 
 #locations {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),url("./images/new-york-page.png");
+    background: url("./images/SkyImage.jpeg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -136,6 +136,7 @@ nav ul {
 .locations-head {
     width: 90vw;
     margin: auto;
+    color: white;
 }
 
 .locations-head h2 {
@@ -148,30 +149,42 @@ nav ul {
 
 .cloud {
     position: absolute;
+    bottom: -300px;
+    right: -650px;
+    z-index: 2;
+    height: 900px;
+    opacity: 0.6;
+    animation: cloudAnimation 30s infinite alternate ease-in-out;
+}
+
+.plane {
+    position: absolute;
+    height: 100px;
     right: 0;
-    top: 0;
-}
-
-.moving-cloud-1{
-    width: 90%;
-    height: auto;
-    opacity: 0.9;
-    animation: cloudAnimation 10s infinite alternate ease-in-out;
-}
-
-.moving-cloud-2{
-    top: 20%;
-    z-index: -1;
-    opacity: 0.5;
-    animation: cloudAnimation 20s infinite alternate ease-in-out;
+    animation: planeAnimation 5s infinite ease-in-out;
+    filter: blur(0.1px);
 }
 
 @keyframes cloudAnimation {
     0% {
-        transform: translate(20%, 0%);
+        transform: translateX(20%);
     }
     100% {
-        transform: translate(0);
+        transform: translateX(30%);
+    }
+}
+
+@keyframes planeAnimation {
+    0% {
+        transform: translate(100%, 100%);
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-1000%, -800%);
     }
 }
 
