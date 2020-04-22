@@ -148,21 +148,35 @@ nav ul {
 }
 
 .cloud {
+    z-index: 3;
     position: absolute;
     bottom: -300px;
     right: -650px;
-    z-index: 2;
     height: 900px;
     opacity: 0.6;
     animation: cloudAnimation 30s infinite alternate ease-in-out;
 }
 
 .plane {
+    z-index: 2;
     position: absolute;
     height: 100px;
     right: 0;
+    filter: blur(0.2px);
     animation: planeAnimation 5s infinite ease-in-out;
-    filter: blur(0.1px);
+}
+
+.plane-trails {
+    z-index: 1;
+    position: absolute;
+    height: 300px;
+    width: 1000px;
+    top: 120px;
+    right: -20px;
+    transform: rotate(15deg);;
+    filter: blur(1px);
+    opacity: 0;
+    animation: planeTrailsAnimation 5s infinite ease-in-out;
 }
 
 @keyframes cloudAnimation {
@@ -185,6 +199,20 @@ nav ul {
     100% {
         opacity: 0;
         transform: translate(-1000%, -800%);
+    }
+}
+
+@keyframes planeTrailsAnimation {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    70% {
+        opacity: 0.1;
+        filter: blur(1px);
+    }
+    100% {
+        opacity: 0;
     }
 }
 
