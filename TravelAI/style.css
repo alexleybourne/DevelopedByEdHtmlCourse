@@ -67,7 +67,7 @@ button:hover {
     color: white;
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
 }
 
 nav {
@@ -84,6 +84,7 @@ nav {
     flex: 2 1 40rem;
     font-family: 'Source Code Pro', monospace;
     display: flex;
+    cursor: pointer;
 }
 
 nav img {
@@ -98,6 +99,14 @@ nav ul {
     justify-content: space-around;
     align-items: center;
     list-style: none;
+}
+
+nav li {
+    transition-duration: 0.5s;
+}
+
+nav li:hover {
+    transform: scale(1.1);
 }
 
 
