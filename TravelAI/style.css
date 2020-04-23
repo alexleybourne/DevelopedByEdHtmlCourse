@@ -62,11 +62,11 @@ button:hover {
 /* Nav Section w/ Hero */
 
 .main-head {
+    z-index: 10;
     background-color: #2881eebd;
     color: white;
     position: fixed;
     width: 100%;
-    z-index: 2;
     backdrop-filter: blur(2px);
 }
 
@@ -140,10 +140,14 @@ nav ul {
 }
 
 .locations-head h2 {
+    z-index: 4;
+    position: relative;
     padding: 1rem 0;
 }
 
 .locations-head h3 {
+    z-index: 4;
+    position: relative;
     padding: 4rem 0;
 }
 
