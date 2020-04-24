@@ -8,6 +8,7 @@
 
 html {
     font-size: 62.5%;
+    overflow: hidden;
 }
 
 body {
@@ -109,29 +110,49 @@ nav li:hover {
     transform: scale(1.1);
 }
 
+body {
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
 
 
 .hero {
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 96, 213, 0.666), transparent), url('./images/PlaneWindowImage.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     color: white;
+    width: 100vw;
+    height:100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     text-align: center;
+    transform-style: preserve-3d;
+}
+
+.hero::before {
+    content:"";
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    position: absolute;
+    z-index: 1;
+    background-image: linear-gradient(rgba(0, 96, 213, 0.666), transparent), url(./images/PlaneWindowImage.jpg);
+    transform:translateZ(-1px) scale(2);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero h3 {
     padding: 5rem;
 }
-
 /* Benefits Section */
 
 #locations {
+    z-index: 2;
     min-height: 100vh;
     background: url("./images/SkyImage.jpeg");
     background-size: cover;
