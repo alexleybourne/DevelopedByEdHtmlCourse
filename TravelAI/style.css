@@ -257,6 +257,22 @@ body {
     }
 }
 
+/* Benefits Section */
+
+.benefits-head {
+    z-index: 2;
+    position: relative;
+    background: #327EE2;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 930px) {
