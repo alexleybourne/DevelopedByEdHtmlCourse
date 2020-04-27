@@ -213,8 +213,8 @@ body {
     height: 300px;
     width: 1000px;
     top: 120px;
-    right: 12px;
-    transform: rotate(15deg);;
+    right: -10px;
+    transform: rotate(18deg);;
     filter: blur(1px);
     opacity: 0;
     animation: planeTrailsAnimation 5s infinite ease-in-out;
@@ -262,10 +262,20 @@ body {
 .benefits {
     z-index: 3;
     position: relative;
-    background-image: linear-gradient(rgba(0, 96, 213, 0.666), transparent), url(./images/PlaneWindowImage.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.benefits video {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.benefits-content {
+    background-image: linear-gradient(rgba(0, 96, 213, 0.666), transparent);
+    backdrop-filter: blur(4px);
 }
 
 .benefits-head {
@@ -292,6 +302,7 @@ body {
     display: flex;
     min-height: 60vh;
     flex-wrap: wrap;
+    background: none;
 }
 
 .card {
