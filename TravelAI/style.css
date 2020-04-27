@@ -321,6 +321,59 @@ body {
     justify-content: center;
 }
 
+/* Contact Us Section */
+
+#contact {
+    min-height: 100vh;
+    background: url('images/PlaneWindowImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    background: rgba(19,28, 39, 0.8);
+    width: 60%;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form, .email-form {
+    padding: 2rem;
+}
+
+.form-wrapper label {
+    margin: 0 2rem;
+}
+
+.form-wrapper button {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    transition-duration: 0.2s;
+    margin-top: 3rem;
+}
+
+.form-wrapper button:hover {
+    width: 100%;
+    font-weight: bolder;
+    border-radius: 0 0 20px 20px;
+    transform: scale(1);
+}
+
+.form-wrapper input {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+}
+
+
 /* Media Queries */
 
 @media screen and (max-width: 930px) {
