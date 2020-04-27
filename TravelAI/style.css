@@ -265,7 +265,7 @@ body {
     background: #327EE2;
     margin-bottom: 3rem;
     padding: 2rem;
-    max-height: 30vh;
+    max-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -299,8 +299,9 @@ body {
     color: #327EE2;
 }
 
-.card img {
+.card-icon img {
     height: 10rem;
+    padding: 1rem;
 }
 
 .card h4,
